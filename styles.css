@@ -1,0 +1,145 @@
+/* Base styles for desktop */
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #010111;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    max-width: 940px;
+    margin: auto;
+    padding: 20px;
+}
+
+.header {
+    padding: 20px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px; /* Space between image and text */
+}
+
+.text-content {
+    flex-grow: 1;
+}
+
+.header h1 {
+    font-size: 2.35em;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.intro-text {
+    margin-top: 5px; /* Reduce space between h2 and paragraph */
+    font-size: 1.1em;
+    line-height: 1.6em;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.header h2 {
+    margin-top: 3px;  /* Adjust this if needed */
+    margin-bottom: 0px; /* Reduce the space below the h2 */
+    font-size: 1.5em;
+    border-bottom: none;  /* Ensure underline is removed */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Social links alignment fix */
+.social-links {
+    margin-top: px;
+    margin-left: 199px; /* Align the social links with the headers */
+}
+
+.social-links a {
+    margin: 0 1px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1); /* Inverts the color of the icons */
+}
+
+.social-links a:hover img {
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .intro-text {
+        margin-top: 2px; /* Reduce space between h2 and paragraph */
+        margin-bottom: 15px; /* Keep margin-bottom for spacing below */
+        font-size: 18px; /* Adjust font size for better fit */
+        line-height: 1.5em; /* Adjust line height for better readability */
+        text-align: left;
+    }
+
+    .profile-img {
+        width: 160px;
+        height: 160px;
+        margin-bottom: 10px;
+    }
+
+    .header h1 {
+        margin-top: 1px;
+        margin-bottom: 2px;
+        font-size: 30px; /* Reduce font size for better fit */
+        line-height: 1.2em; /* Adjust line height for spacing */
+        text-align: left; /* Align text to the left */
+    }
+    .header h2 {
+        margin-top: 3px;  /* Adjust this if needed */
+     
+    }
+
+    .header h1::before {
+        content: "Web Developer | \A Galkaio, Somalia";
+        white-space: pre-line; /* Preserve line breaks */
+    }
+
+    .header h1 {
+        visibility: hidden;
+        position: relative;
+    }
+
+    .header h1::before {
+        visibility: visible;
+        position: absolute;
+    }
+
+    /* Align social icons to the headers on mobile */
+    .social-links {
+        margin-left: 0; /* Remove the left margin for mobile */
+        text-align: left; /* Align to the left */
+        margin-top: 5px;
+    }
+
+    .social-links img {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Target h2 specifically if needed */
+    h2 {
+        margin-top: 5px; /* Adjust this value to reduce space above h2 */
+        margin-bottom: 10px; /* Adjust this value as needed */
+    }
+}
